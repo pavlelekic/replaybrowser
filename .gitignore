@@ -1,0 +1,5 @@
+/.project
+/node_modules/
+!/coverage/karma-coverage.conf.js
+!/coverage/karma-server.cmd
+!/coverage/karma-server.sh

@@ -1,0 +1,8 @@
+.git
+release
+coverage
+node_modules
+chrome-extension/UI/jquery
+chrome-extension/UI/bootstrap-3.3.4-dist
+chrome-extension/UI/font-awesome-4.3.0
+marketing

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    div {padding: 20px;}
+    #divblue {background-color: blue;}
+    #divred {background-color: red;}
+    #divgreen {background-color: green;}
+    </style>    
+  </head>
+  <body>
+    <h2>This page is for manually testing recording functionality</h2>
+    <ol>
+      <li>Click "Start recording" button.</li>
+      <li>Move mouse around, click a little.</li>
+      <li>Open console (F12 on Windows and Linux).</li>
+      <li>Click "Stop recording" button.</li>      
+    </ol>
+    <p>In the console window you will see a json with all the events recoreded.</p>
+    <div id="divblue">
+      div blue
+      <div id="divred">
+        div red
+        <div id="divgreen">
+          div green
+          <p>Some text... <a href="#">a link</a></p>
+          <input type="button" value="Start recording" onclick="startRecording()" id="startRecordingButton">
+          <input type="button" value="Stop recording" onclick="stopRecording()" id="stopRecordingButton" disabled>          
+        </div>
+    </div>
+    </div>
+    <script src="core/cssPath.js"></script>     
+    <script src="core/cssPathExtended.js"></script>
+    <script src="core/Trigger.js"></script>
+    <script src="core/Recorder.js"></script>
+    <script src="core/Player.js"></script>
+    <script src="bookmarklet/Bookmarklet.js"></script>     
+    <script src="core/make.js"></script>
+    <script>
+      var b = rpl.make.bookmarklet();      
+      var startButton = document.getElementById("startRecordingButton");
+      var stopButton = document.getElementById("stopRecordingButton");      
+              
+      function startRecording() {
+        b.startRecording();   
+        startButton.disabled = true;
+        stopButton.disabled = false;           
+      }
+
+      function stopRecording() {
+        b.stopRecording();
+        console.log(JSON.stringify(JSON.parse(localStorage.getItem("lastRecording")), null, 2));
+        startButton.disabled = false;
+        stopButton.disabled = true;
+      }      
+    </script>    
+  </body>
+</html>

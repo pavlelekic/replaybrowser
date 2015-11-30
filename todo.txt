@@ -1,0 +1,29 @@
+* record & play multiple recordings
+* organize files in root of the project to subdirectories
+* recordings -> records
+* if you can't find event target retry 3x with 50ms increasing delay
+* extract classes from testHelper.js into separate files
+* export recordings functionality
+
+Trigger.test.js:
+* refactor & cleanup + figure out why you have to use `outer` instead of `outerDiv` variable
+* add tests for relatedTarget
+
+UI (chrome extension)
+* add normalize.css to the popup.html
+* blinking red recoring icon to show while recording
+
+* when recording set MODE state variable to "RECORDING" so that all the other components will be rendered as disabled by React
+* use accordion from bootstrap to switch between different app modes
+* use jquery aid menu Ben Kamens
+
+* record button (+ red circle inactive/active icon)
+* a list of all the available recordings
+* play button
+* edit button (to rename and/or change description)
+* delete button
+* description tooltip
+
+* HOVER triggering
+* in the Trigger class, for every mouseenter and mouseout if the element has :hover css defined apply that css from js
+* see how the ghostlab people did this 

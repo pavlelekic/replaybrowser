@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    div {padding: 20px;}
+    #divblue {background-color: blue;}
+    #divred {background-color: red;}
+    #divgreen {background-color: green;}
+    </style>    
+  </head>
+  <body>
+    <h2>This page is for manually testing recording functionality</h2>
+    <ol>
+      <li>Click "Start recording" button.</li>
+      <li>Move mouse around, click a little.</li>
+      <li>Open console (F12 on Windows and Linux).</li>
+      <li>Click "Stop recording" button.</li>      
+    </ol>
+    <p>In the console window you will see a json with all the events recoreded.</p>
+    <div id="divblue">
+      div blue
+      <div id="divred">
+        div red
+        <div id="divgreen">
+          div green
+          <p>Some text... <a href="#">a link</a></p>
+        </div>
+    </div>
+    </div>
+    <script src="replaybrowser.js"></script>          
+  </body>
+</html>

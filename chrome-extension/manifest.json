@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "replaybrowser",
+  "description": "Macro recorder & playback (enables you to record mouse & keyboard actions, to save them and replay later).",
+  "version": "1.0.0",
+  "author": "Pavle Lekic",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": "your injected script.js"
+	}],
+
+	"permissions": [
+		"http://replaybrowser.com",
+		"tabs",
+		"unlimitedStorage"
+	]
+}
